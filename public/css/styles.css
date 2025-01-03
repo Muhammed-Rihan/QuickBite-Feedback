@@ -1,0 +1,278 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f4fc, #e5effc);
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-actions input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 15vh 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 0.5vh;
+  }
+  
+  .hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .cta {
+    height: 7vh;
+    width: 15vw;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover {
+    transform: translateY(-10px);
+  }
+  
+  .button-group {
+    height: 12vh;
+    width: 50vw;
+    margin-top: 15vh;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .option {
+    width: 30%;
+    height: 74px;
+    max-height: 74px;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Makes the buttons more rounded */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+    border-color: #0078d4;
+    color: #0078d4;
+  }
+  
+  .option.active {
+    border-color: #0078d4;
+    background-color: #e5effc;
+    color: #0078d4;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+  }
+  
+  .button-group {
+    margin-bottom: 20px;
+  }
+  .option {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+  }
+  .option.active {
+    background-color: #000;
+    color: white;
+  }
+  .content {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #000;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .content{
+      width: 65vw;
+      height: max-content;
+      border-radius: 25px;
+  }
+  
+  
+    .card {
+    width: 90%;
+    padding: 5%;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+  
+    .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+  button:hover{
+      transform: translateY(-10px);
+  }
+  
+  .feedback h2 {
+      text-align: center;
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+  
+  /* Form Elements Styling */
+  
+  section .feedback{
+      width: 70%;
+  }
+  
+  .feedback form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  /* Input and Textarea Styling */
+  .feedback input[type="text"],
+  .feedback input[type="number"],
+  .feedback textarea,
+  .feedback select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      width: 100%;
+  }
+  
+  /* Button Styling */
+  .feedback button {
+    margin: 20px;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .feedback button:hover {
+      background-color: #000;
+  }
+  
+  .menu .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .menu .card {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .menu .card h2 {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  menu .meal {
+    margin: 10px 0;
+  }
+  
+  .menu .meal span {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  

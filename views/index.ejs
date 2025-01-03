@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite Feedback</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Femin's Kitchen</div>
+        
+        </div>
+    </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <h1>Your Feedback matters to us</h1>
+            <p>find home like food in a Hostel, please give your feedback and help us improve</p>
+            <button class="cta">Join Femin's Kitchen</button>
+            <div class="button-group">
+              <button class="option active" onclick="showContent('home', this)">Home</button>
+              <button class="option" onclick="showContent('about', this)">FeedBack</button>
+              <button class="option" onclick="showContent('contact', this)">Menu</button>
+            </div>
+            <div class="content" id="content"><h1>Welcome to Femin's Kitchen</h1>
+              <div class="card">
+              <h2>At the heart of our hostel, the mess is where delicious meals meet warm conversations. We’re dedicated to ensuring that every meal you enjoy is nutritious, hygienic, and prepared with care. Your feedback helps us serve you better every day!</h2>
+              </div>
+              <div class="card">
+                  <h2>try our recently integrated realtime feedback back system</h2>
+                  <p>Why Your Feedback Matters:
+                      Your voice drives positive change! Our real-time feedback system ensures that your suggestions and opinions are heard and acted upon quickly. Help us improve your dining experience by sharing your thoughts.</p> 
+              </div>
+              <div class="card">
+                  <h2>
+                      checkout our menu in the navigatin bar
+                      
+                  </h2>
+              </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+      function showContent(section, button) {
+        const contentDiv = document.getElementById('content');
+        const buttons = document.querySelectorAll('.option');
+  
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+  
+        // Add active class to the clicked button
+        button.classList.add('active');
+  
+        // Update content based on the button clicked
+        if (section === 'home') {
+          contentDiv.innerHTML = `
+            <h1>Welcome to Femin's Kitchen</h1>
+    <div class="card">
+    <h2>At the heart of our hostel, the mess is where delicious meals meet warm conversations. We’re dedicated to ensuring that every meal you enjoy is nutritious, hygienic, and prepared with care. Your feedback helps us serve you better every day!</h2>
+    </div>
+    <div class="card">
+        <h2>try our recently integrated realtime feedback back system</h2>
+        <p>Why Your Feedback Matters:
+            Your voice drives positive change! Our real-time feedback system ensures that your suggestions and opinions are heard and acted upon quickly. Help us improve your dining experience by sharing your thoughts.</p> 
+    </div>
+    <div class="card">
+        <h2>
+            checkout our menu in the navigatin bar
+            
+        </h2>
+    </div>
+          `;
+        } else if (section === 'about') {
+          contentDiv.innerHTML = `
+            <section class="feedback">
+        <h2>Feedback</h2>
+        <form action="/submit-feedback" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="number" name="mess_number" placeholder="Mess Number" required>
+            <textarea name="comment" placeholder="Your Feedback" required></textarea>
+            <select name="meal_course" required>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+          `;
+        } else if (section === 'contact') {
+          contentDiv.innerHTML = `
+            <div class="menu">
+            <header>
+        <h1 style="text-align: center; color: #000; margin: 20px 0;">Femin's Kitchen Mess Menu</h1>
+    </header>
+
+    <div class="container">
+        <!-- Monday Card -->
+        <div class="card">
+            <h2>Monday</h2>
+            <div class="meal">
+                <span>Breakfast:</span> Idly (4 No's)
+            </div>
+            <div class="meal">
+                <span>Lunch:</span> Veg. / Non-Veg. Meals
+            </div>
+            <div class="meal">
+                <span>Dinner:</span> Chapathi (3 No's) & Egg Curry
+            </div>
+        </div>
+
+        <!-- Tuesday Card -->
+        <div class="card">
+            <h2>Tuesday</h2>
+            <div class="meal">
+                <span>Breakfast:</span> Poori (3 No's) & Baji
+            </div>
+            <div class="meal">
+                <span>Lunch:</span> Veg. / Non-Veg. Meals & Omelet
+            </div>
+            <div class="meal">
+                <span>Dinner:</span> Dosa (3 No's)
+            </div>
+        </div>
+
+        <!-- Wednesday Card -->
+        <div class="card">
+            <h2>Wednesday</h2>
+            <div class="meal">
+                <span>Breakfast:</span> Paratha (3 No's) & Chicken Curry
+            </div>
+            <div class="meal">
+                <span>Lunch:</span> Veg. / Non-Veg. Meals
+            </div>
+            <div class="meal">
+                <span>Dinner:</span> Idly (4 No's)
+            </div>
+        </div>
+
+        <!-- Thursday Card -->
+        <div class="card">
+            <h2>Thursday</h2>
+            <div class="meal">
+                <span>Breakfast:</span> Idiyappam (3 No's) & Moong Dhal Curry
+            </div>
+            <div class="meal">
+                <span>Lunch:</span> Veg. / Non-Veg. Meals & Fish Curry
+            </div>
+            <div class="meal">
+                <span>Dinner:</span> Appam (3 No's) & Dhal Fry
+            </div>
+        </div>
+
+        <!-- Friday Card -->
+        <div class="card">
+            <h2>Friday</h2>
+            <div class="meal">
+                <span>Breakfast:</span> Idly (4 No's)
+            </div>
+            <div class="meal">
+                <span>Lunch:</span> Veg. / Non-Veg. Meals
+            </div>
+            <div class="meal">
+                <span>Dinner:</span> Ghee Rice & Chicken Curry
+            </div>
+        </div>
+
+        <!-- Saturday Card -->
+        <div class="card">
+            <h2>Saturday</h2>
+            <div class="meal">
+                <span>Breakfast:</span> Dosa (3 No's)
+            </div>
+            <div class="meal">
+                <span>Lunch:</span> Veg. / Non-Veg. Meals
+            </div>
+            <div class="meal">
+                <span>Dinner:</span> Chapathi (3 No's) & Kabab (2 Pcs)
+            </div>
+        </div>
+
+        <!-- Sunday Card -->
+        <div class="card">
+            <h2>Sunday</h2>
+            <div class="meal">
+                <span>Breakfast:</span> Appam (3 No's) & Veg Curry
+            </div>
+            <div class="meal">
+                <span>Lunch:</span> Chicken Biriyani
+            </div>
+            <div class="meal">
+                <span>Dinner:</span> Paratha & Veg Curry
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Must show your ID card to the counter. Tea/Coffee and extra items are payable.
+    </footer>  
+            </div>
+          `;
+        }
+      }
+    </script>
+</body>
+</html>
