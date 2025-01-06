@@ -9,7 +9,7 @@
 <body>
     <header>
       <nav class="navbar">
-        <div class="logo">Femin's Kitchen</div>
+        <div class="logo">HostelName</div>
         
         </div>
     </nav>
@@ -18,13 +18,14 @@
         <section class="hero-section">
             <h1>Your Feedback matters to us</h1>
             <p>find home like food in a Hostel, please give your feedback and help us improve</p>
-            <button class="cta">Join Femin's Kitchen</button>
+            <button class="cta">Join Fresher's Hostel</button>
             <div class="button-group">
               <button class="option active" onclick="showContent('home', this)">Home</button>
               <button class="option" onclick="showContent('about', this)">FeedBack</button>
               <button class="option" onclick="showContent('contact', this)">Menu</button>
+              <button class="option" onclick="showContent('Anouncements', this)">Anouncements</button>
             </div>
-            <div class="content" id="content"><h1>Welcome to Femin's Kitchen</h1>
+            <div class="content" id="content"><h1>Welcome to Fresher's Hostel</h1>
               <div class="card">
               <h2>At the heart of our hostel, the mess is where delicious meals meet warm conversations. We’re dedicated to ensuring that every meal you enjoy is nutritious, hygienic, and prepared with care. Your feedback helps us serve you better every day!</h2>
               </div>
@@ -58,7 +59,7 @@
         // Update content based on the button clicked
         if (section === 'home') {
           contentDiv.innerHTML = `
-            <h1>Welcome to Femin's Kitchen</h1>
+            <h1>Welcome to Fresher's Hostel</h1>
     <div class="card">
     <h2>At the heart of our hostel, the mess is where delicious meals meet warm conversations. We’re dedicated to ensuring that every meal you enjoy is nutritious, hygienic, and prepared with care. Your feedback helps us serve you better every day!</h2>
     </div>
@@ -87,6 +88,7 @@
                 <option value="lunch">Lunch</option>
                 <option value="dinner">Dinner</option>
             </select>
+            
             <button type="submit">Submit</button>
         </form>
     </section>
@@ -95,7 +97,7 @@
           contentDiv.innerHTML = `
             <div class="menu">
             <header>
-        <h1 style="text-align: center; color: #000; margin: 20px 0;">Femin's Kitchen Mess Menu</h1>
+        <h1 style="text-align: center; color: #000; margin: 20px 0;">Fresher's Hostel Mess Menu</h1>
     </header>
 
     <div class="container">
@@ -204,6 +206,10 @@
             </div>
           `;
         }
+        else if (section === 'Anouncements') {
+          contentDiv.innerHTML = `<h1>No Anouncements yet</h1>`
+        }
+
       }
     </script>
 </body>
