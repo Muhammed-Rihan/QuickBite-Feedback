@@ -11,7 +11,7 @@ const db = new pg.Client({
     user:"postgres",
     host:"localhost",
     database:"quickbitefeedback",
-    password:"1612",
+    password: YOUR-PASSWORD,
     port:5432,
   });
 
